@@ -11,5 +11,5 @@
 
 (def app
   (-> app-routes
-      (middleware/wrap-json-body)
+      (middleware/wrap-json-body {:key-fn keyword})
       (middleware/wrap-json-response)))
